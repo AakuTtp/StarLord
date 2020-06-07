@@ -1,0 +1,323 @@
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Nunito', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    cursor: none;
+}
+body{
+    cursor: none;
+    overflow-x: hidden;
+}
+.nightMode{
+    background: #000;
+    color: #fff;
+}
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.1);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    transition-property: background, transform;
+    z-index: 5;
+    backdrop-filter: grayscale();
+
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+header h2{
+    width: 20%;
+    color: #111;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+header nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    cursor: none;
+}
+header nav a{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 15px;
+    z-index: 6;
+    cursor: none;
+    transition: 0.s linear;
+}
+header nav a:hover{
+    color: #fff;
+}
+header .bars{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.3s ease;
+    z-index: 6;
+    visibility: hidden;
+}
+header .bars span{
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+header .bars:hover span{
+    background-color: #fff;
+}
+.toggle .item1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .item2{
+    opacity: 0;
+}
+.toggle .item3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+header .headerbuttons{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+header .facebook{
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 1px #000;
+}
+header .youtube{
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 1px #000;
+}
+
+header .facebook .fab{
+}
+/*Header Responsive for Moble Design*/
+@media (max-width: 600px){
+    header h2{
+        font-size: 20px;
+    }
+
+    header nav{
+        position: absolute;
+        width: 0;
+        height: calc(100vh - 10vh);
+        background-color: burlywood;
+        top: 10vh;
+        left: 0;
+        flex-direction: column;
+        transition: 0.5s ease-in-out;
+        z-index: 5;
+    }
+
+    header nav a{
+        visibility: hidden;
+        z-index: 7;
+        transition: 0.3s linear;
+    }
+    header nav a:hover .cursor{
+        background: rgba(0,0,0,0.1);
+    }
+    header .bars{
+        visibility: visible;
+    }
+    .cursor{
+        z-index: 6;
+    }
+    header .headerbuttons{
+        position: absolute;
+        bottom: 15px;
+        left: -50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        z-index: 6;
+        
+    }
+    header .bars:hover span{
+        background: burlywood;
+    }
+
+}
+
+/*section*/
+section{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 10vh);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+section .sectionText{
+    position: relative;
+    width: 550px;
+    height: 500px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+section .sectionText h2{
+    color: #F50057;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+section .sectionText h1{
+    color: #111;
+    font-size: 37px;
+    margin-bottom: 15px;
+}
+section .sectionText p{
+    color: #696969;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+section .sectionText a{
+    color: #F50057;
+    padding: 10px 15px;
+    position: absolute;
+    border: 2px solid #f50057;
+    bottom: 115px;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    right: 0px;
+
+}
+
+section .sectionText a span{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: #f50057;
+    bottom:0;
+    transition: 1s ease-in-out;
+    mix-blend-mode: difference;
+    border-top-left-radius: 0px ;
+    border-top-right-radius: 0px;
+
+}
+.sectiona{
+    animation: animatecursorforsectiontexta 0.3s linear infinite;
+}
+@keyframes animatecursorforsectiontexta{
+    0%{
+        border: 2px dashed #000;
+        transform: rotate(0deg);
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        border: 2px dotted #000;
+        transform: rotate(180deg);
+        width: 20px;
+        height: 20px;
+    }
+    100%{
+        border: 2px dashed #000;
+        transform: rotate(360deg);
+        width: 30px;
+        height: 30px;
+    }
+}
+section .sectionText a:hover span{
+    height: 100%;
+    mix-blend-mode: difference;
+}
+
+section .sectionimg{
+    width: 650px;
+    height: 500px;
+    background-image: url("img/main.png");
+    background-size: cover;
+    background-position: center;
+
+}
+@media (max-width: 600px){
+    section{
+        flex-direction: column-reverse;
+    }
+    section .sectionText{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    section .sectionText h2{
+        color: #F50057;
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    section .sectionText h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    section .sectionText p{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    section .sectionText a{
+        position: relative;
+        bottom: 10px;
+    }
+    section .sectionimg{
+        width: 100%;
+        height: 60%;
+        background-image: url("img/main.png");
+        background-size: cover;
+        background-position: center;
+    
+    }
+}
