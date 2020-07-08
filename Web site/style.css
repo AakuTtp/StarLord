@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #fff;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("Img/section.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+section .coversection{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+    transition: 1s ease;
+}
+section .sectiontext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width: 600px;
+    height: auto;
+    transition: 2s;
+    opacity: 0;
+}
+section .sectiontext h2{
+    color: purple;
+    font-weight: 600;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 20px;
+}
+section .sectiontext p{
+    color: #111;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+}
+section .sectiontext a{
+    position: absolute;
+    padding: 10px 15px;
+    background: plum;
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    text-align: center;
+    left: -500px;
+    transition-delay: 0.5s;
+    transition: 2s linear;
+}
+section .sectiontext a:hover{
+    border: plum;
+    box-shadow: 0px 0px 10px 10px plum,  0px 0px 20px 20px plum,  0px 0px 25px 25px plum;
+}
+
+/*sECOND PART*/
+.secondpart{
+    position: relative;
+    background-image: url("Img/2.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Questrial', sans-serif;
+}
+.secondpart .seconparttext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+.secondpart .seconparttext h2{
+    color: orangered;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 45px;
+    margin-bottom: 23px;
+}
+.secondpart .seconparttext .secondparttextchnge{
+    color: skyblue;
+    position: relative;
+}
+.seconparttext .secondparttextchnge:after{
+    content: ' ';
+    animation: animatetextpart2 5s linear infinite;
+}
+@keyframes animatetextpart2{
+    0%{content: ' B';}
+    11.1%{content: ' BE';}
+    22.2%{content: ' BEA';}
+    33.3%{content: ' BEAU';}
+    44.4%{content: ' BEAUT';}
+    55.5%{content: ' BEAUTI';}
+    66.6%{content: ' BEAUTIF';}
+    77.7%{content: ' BEAUTIFU';}
+    100%{content: ' BEAUTIFUL';}
+}
+.secondpart .seconparttext p{
+    font-size: 26px;
+    margin-bottom: 45px;
+}
+.secondpart .secondparttextlink{
+    padding: 10px 15px;
+    border: 2px solid brown;
+    text-decoration: none;
+    color: brown;
+    text-shadow: 2px 2px 5px #000;
+    transition: 0.5s linear;
+    border-radius: 20px;
+}
+.secondpart .secondparttextlink:hover{
+    color: #fff;
+    background-color: brown;
+}
+/*Third Part*/
+.thirdpart{
+    position: relative;
+    background-image: url("Img/3.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.snowfall{
+    width: 100%;
+    height: 100%;
+    background-image: url("Img/snow1.png");
+    animation: animatesnowfall 10s linear infinite;
+}
+@keyframes animatesnowfall{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 100px 650px;
+    }
+}
+
+
+.thirdpart .thirdparttext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 2px 2px 4px #000;
+}
+.thirdpart .thirdparttext h2{
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 20px;
+}
+.thirdparttext h2 span{
+    color: #111;
+    text-shadow: 2px 2px 5px #fff;
+}
+.thirdpart .thirdparttext p{
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+.thirdparttext a{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 25px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-shadow: none;
+    transition: all 0.5s ease;
+    letter-spacing: 2px;
+}
+.thirdpartbtn1{
+    background-color: #fff;
+    color: #111;
+    
+}
+.thirdpartbtn1:hover{
+    background-color: #000;
+    color: #fff;
+}
+.thirdpartbtn2{
+    background-color: #000;
+    color: #fff;
+}
+.thirdpartbtn2:hover{
+    background-color: #fff;
+    color: #111;
+}
+
+/*Fourth Part*/
+.fourthpart{
+    position: relative;
+    background-image: url("Img/3.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.fourthpart .rain{
+    width: 100%;
+    height: 100%;
+    background-image: url("Img/rain.png");
+    animation: animaterainfall 0.3s linear infinite;
+}
+.lightinig{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animatelighting 4s linear infinite;
+    background-color: #fff;
+    opacity: 0;
+}
+@keyframes animatelighting{
+        0%
+        {
+            opacity:0;
+        }
+        10%
+        {
+            opacity:0;
+        }
+        11%
+        {
+            opacity:1;
+        }
+        14%
+        {
+            opacity:0;
+        }
+        20%
+        {
+            opacity:0;
+        }
+        21%
+        {
+            opacity:1;
+        }
+        24%
+        {
+            opacity:0;
+        }
+        104%
+        {
+            opacity:0;
+        } 
+}
+@keyframes animaterainfall{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
+
+.fourthpart .fourthparttext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+}
+.fourthpart .fourthparttext h2{
+    color: #afdbf7;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px #000;
+    letter-spacing: 2px;
+    margin-bottom: 20px
+}
+.fourthpart .fourthparttext p{
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+.fourthpart .fourthparttext a{
+    position: relative;
+    padding: 10px 20px;
+    width: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    background-color: #afdbf7;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #000;
+    overflow: hidden;
+}
+.fourthpart .fourthparttext a span{
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.1s linear;
+}
+.fourthpart .fourthparttext a:hover span{
+    height: 100%;
+    opacity: 0.5;
+}
+
+/*Fifth Part*/
+.fifthpart{
+    position: relative;
+    background-image: url("Img/5.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+    overflow: hidden;
+}
